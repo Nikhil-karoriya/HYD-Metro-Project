@@ -1,0 +1,228 @@
+body{
+    height: 100vh;
+    width: 100%;
+    background-image: url("./pics/subway_metro.jpg");
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.first_view{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.planner{
+    height: 30rem;
+    width: 25%;
+    position: absolute;
+    left: 7%;
+    top: 15%;
+    border-radius: 2%;
+    background-color: #e2c799f1;
+    padding: 0.8rem;
+    box-shadow: 0.1rem 0.1rem 1rem #C08261;
+    margin: 2rem;
+}
+.metro_map img{
+    position: absolute;
+    left: 42%;
+    top: 5%;
+    height: 80%;
+    width: 50%;
+    border-radius: 9px;
+    border: 0.7px solid #FF8585;
+    box-shadow: 0 0 1rem #C08261;
+    transition: transform 0.5s ease;
+    margin-top: 2rem;
+}
+.metro_map img:hover{
+    transform: scale(1.25);
+}
+@media (max-width:1400px){
+    .short_rt p i{
+        display: none;
+    }
+    .planner{
+        left: 35%;
+        top: 8%;
+    }
+    .metro_map img{
+        top: 50%;
+        left: 14%;
+        width: 70%;
+    }
+    .main{
+        display: flex;
+        flex-wrap:wrap;
+        align-items: center;
+        overflow: scroll;
+    }
+}
+.journey{
+    display: flex;
+    border-bottom-width: 5rem;
+    border-bottom: 1px solid #9A3B3B;
+    margin-bottom: 1rem;
+    color: #9A3B3B;
+    align-items: center;
+}
+.journey img{
+    height: 3rem;
+    width: 4rem;
+    margin-right: 2rem;
+    margin-bottom: 0.5rem;
+}
+.src_ip{
+    display: block;
+    width: 100%;
+    height: 2.3rem;
+    border-radius: 0.25rem;
+    border-color: #9A3B3B;
+    background-color: #BC9F8B;
+    color: black;
+    box-shadow: 1px 1px 0.3rem #9a3b3b;
+}
+.show_lbl{
+    font-weight: 500;
+    color: red;
+}
+.note{
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.shortest{
+    margin: 2rem 0;
+}
+.short_rt img{
+    height: 3.2rem;
+    width: 3.2rem;
+    margin-right: 2rem;
+}
+.short_rt{
+    display: flex;
+    align-items: center;
+    border-top:rgba(255, 0, 0, 0.687) 1px solid;
+    border-bottom:rgba(255, 0, 0, 0.685) 1px solid;
+    padding: 0.3rem 0;
+}
+.short_rt p{
+    color: #9A3B3B;
+}
+.short_rt:hover{
+    cursor: pointer;
+}
+.short_rt i{
+    position:absolute;
+    left: 17.5rem;
+    top: 20.15rem;
+}
+.bt_sub{
+    position: absolute;
+    left: 25%;
+}
+
+#final_path{
+    display: none;
+    position: relative;
+    top: 100vh;
+    text-align: center;
+}
+#paths{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #d8b4f89d;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #FBF0B2;
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: #333;
+    max-width: 1000px;
+    margin: 20px auto;
+    text-align: center;
+}
+#final_path h2{
+    position: relative;
+    left: 2%;
+    margin-bottom: 2rem;
+    color: #FFDA76;
+    text-decoration: solid underline #C8A1E0;
+}
+#dist{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #CAEDFF;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #FBF0B2;
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: #1E2A5E;
+    max-width: 550px;
+    margin: 20px auto;
+    text-align: center;
+    margin-bottom: 3rem;
+
+}
+/* From Uiverse.io by joe-watson-sbf */ 
+.flip-card {
+    background-color: transparent;
+    width: 290px;
+    height: 150px;
+    perspective: 1000px;
+    font-family: sans-serif;
+  }
+  
+  .title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid coral;
+    border-radius: 1rem;
+  }
+  
+  .flip-card-front {
+    background: linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%,
+       rgb(255, 211, 195) 40%, rgba(255, 127, 80, 0.603) 48%);
+    color: coral;
+  }
+  
+  .flip-card-back {
+    height: fit-content;
+    background: linear-gradient(120deg, rgb(255, 174, 145) 30%, coral 88%,
+       bisque 40%, rgb(255, 185, 160) 78%);
+    color: white;
+    transform: rotateY(180deg);
+    font-size: 10px;
+  }
